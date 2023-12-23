@@ -50,7 +50,7 @@ const Navigation = () => {
                 <div className='flex items-center space-x-3'>
                     <Avatar
                         alt='username'
-                        src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&psig=AOvVaw0bOPmMZhdqQZubYUcKnwjA&ust=1703406805775000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCODAqrWTpYMDFQAAAAAdAAAAABAD'
+                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
                     />
                     <div>
                         <span>User 1</span> <br></br>
