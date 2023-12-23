@@ -46,7 +46,7 @@ const HomeSection = () => {
             <section className={`pb-10`}>
                 <div className='flex space-x-5'>
                     <Avatar alt="username"
-                        src='https://images.app.goo.gl/G5n6DFF12LD1Kxhz8' />
+                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png' />
                     <div className='w-full'>
                         <form onSubmit={formik.handleSubmit}>
                             <div >

@@ -65,7 +65,7 @@ const TweetCard = () => {
                 <Avatar
                     className='cursor-pointer'
                     alt='username'
-                    src='https://images.app.goo.gl/sQ5Viqqrc7NbDLES8'
+                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
                     onClick={() => navigate(`/profile/${6}`)}
                 />
 
@@ -76,7 +76,7 @@ const TweetCard = () => {
                             <span className='font-semibold'> User 1</span>
                             <span className='text-gray-600'>@user1 . 2m</span>
 
-                            <img className='ml-2 w-5 h-5' src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTwitter_verification&psig=AOvVaw1P-GWqjpl9uielxJAyajzB&ust=1703452522582000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCIDZ6KW9poMDFQAAAAAdAAAAABAE" alt='verified' />
+                            <img className='ml-2 w-5 h-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1920px-Twitter_Verified_Badge.svg.png" alt='verified' />
 
                         </div>
                         <div>
@@ -107,7 +107,7 @@ const TweetCard = () => {
                     <div className='mt-2'>
                         <div className='cursor-pointer'>
                             <p className='mb-2 p-0'>Twitter clone using react and spring boot</p>
-                            <img className='w-[28rem] border border-gray-400 p-5 rounded-md' src='https://drive.google.com/file/d/1pOzTZZPNFjY2ulHsZutAav2hABl-YMHu/view?usp=sharing' alt='' />
+                            <img className='w-[28rem] border border-gray-400 p-5 rounded-md' src='https://svn.apache.org/repos/asf/kafka/site/logos/kafka-logo-wide.png' alt='' />
                         </div>
 
                         <div className='py-5 flex flex-wrap justify-between items-center'>
