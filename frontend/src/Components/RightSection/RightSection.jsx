@@ -3,6 +3,9 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined';
 import { Button } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import SubscriptionModal from '../SubscriptionModal/SubscriptionModal';
+import { useState } from 'react';
+
 
 
 const RightSection = () => {
@@ -10,6 +13,11 @@ const RightSection = () => {
     const handleChangeTheme = () => {
         console.log("change theme");
     }
+
+
+  const [openSubscriptionModal, setOpenSubscriptionModal] = useState(false);
+  const handleOpenSubscriptionModal = () => setOpenSubscriptionModal(true);
+  const handleCloseSubscriptionModal = () => setOpenSubscriptionModal(false);
 
     return (
         <div className='py-5 sticky top'>
@@ -30,7 +38,7 @@ const RightSection = () => {
 
                 <h1 className='text-xl font-bold'>Get Verified</h1>
                 <h1 className='font-bold my-2'>Subscribe to unlock new features</h1>
-                <Button variant='contained' sx={{ padding: "10px", paddingX: "20px", borderRadius: "25px" }}>
+                <Button onClick={handleOpenSubscriptionModal} variant='contained' sx={{ padding: "10px", paddingX: "20px", borderRadius: "25px" }}>
                     Get Verified
                 </Button>
             </section>
@@ -55,6 +63,10 @@ const RightSection = () => {
                 </div>
                 )}
 
+            </section>
+
+            <section>
+                <SubscriptionModal handleClose={handleCloseSubscriptionModal} open={openSubscriptionModal} />
             </section>
 
         </div>

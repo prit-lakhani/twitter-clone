@@ -67,7 +67,7 @@ export default function ProfileModal({open, handleClose}) {
                                 </IconButton>
                                 <p className='text-sm'>Edit Profile</p>
                             </div>
-                            <Button type='submit'>Save Profile</Button>
+                            <Button type='submit'>Save</Button>
                         </div>
                         <div className='hideScrollBar overflow-y-scroll overflow-x-hidden h-[80vh]'>
                             <React.Fragment>
