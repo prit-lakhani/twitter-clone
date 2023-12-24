@@ -46,19 +46,26 @@ const HomeSection = () => {
             <section className={`pb-10`}>
                 <div className='flex space-x-5'>
                     <Avatar alt="username"
-                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png' />
+                        src='https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg' />
                     <div className='w-full'>
                         <form onSubmit={formik.handleSubmit}>
                             <div >
-                                <input type='text' name='content' placeholder='What is happening?' className={`border-none outline-none text-xl bg-transpernt`}
-                                    {...formik.getFieldProps('content')} />
-                                {formik.errors.eontent && formik.touched.content && (
+                                <input
+                                    type='text'
+                                    name='content'
+                                    placeholder='What is happening?'
+                                    className={`border-none outline-none text-xl bg-transpernt`}
+                                    {...formik.getFieldProps('content')}
+                                />
+
+                                {formik.errors.content && formik.touched.content && (
                                     <span className='text-red-500'> {formik.errors.content} </span>
                                 )}
                             </div>
-                            <div>
-                                {/* <img src='' alt='' /> */}
-                            </div>
+                            {/* <div>
+                                <img src='' alt='' />
+                            </div> */}
+
                             <div className='flex justify-between items-center mt-5'>
                                 <div className='flex space-x-5 items-center'>
                                     <label className='flex items-center space-x-2 rounded-md cursor-pointer'>
@@ -71,25 +78,26 @@ const HomeSection = () => {
                                             onChange={handleSelectImage}
                                         />
                                     </label>
-                                        
-                                        <FmdGoodIcon className='text-[#1d9bf0]' />
-                                        <TagFacesIcon className='text-[#1d9bf0]' />
 
-                                        <div> 
-                                            <Button sx={{ 
-                                                width: "100%", 
-                                                borderRadius: "20px", 
-                                                paddingY: "8px", 
-                                                paddingX: "20px", 
-                                                bgcolor: "#1e88e5" 
-                                                }} 
-                                                variant='conatined'
-                                                type='submit'
-                                                >
-                                                   Tweet 
-                                            </Button>
-                                        </div>
+                                    <FmdGoodIcon className='text-[#1d9bf0]' />
+                                    <TagFacesIcon className='text-[#1d9bf0]' />
                                 </div>
+                                <div>
+                                    <Button
+                                        sx={{
+                                            width: "100%",
+                                            borderRadius: "20px",
+                                            paddingY: "8px",
+                                            paddingX: "20px",
+                                            bgcolor: "#1e88e5"
+                                        }}
+                                        variant='contained'
+                                        type='submit'
+                                    >
+                                        Tweet
+                                    </Button>
+                                </div>
+
                             </div>
                         </form>
                     </div>

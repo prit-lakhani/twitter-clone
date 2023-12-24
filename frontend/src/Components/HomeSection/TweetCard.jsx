@@ -65,7 +65,7 @@ const TweetCard = () => {
                 <Avatar
                     className='cursor-pointer'
                     alt='username'
-                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
+                    src='https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg'
                     onClick={() => navigate(`/profile/${6}`)}
                 />
 
@@ -73,8 +73,8 @@ const TweetCard = () => {
                     <div className='flex justify-between items-center'>
                         <div className='flex cursor-pointer items-center space-x-2'>
 
-                            <span className='font-semibold'> User 1</span>
-                            <span className='text-gray-600'>@user1 . 2m</span>
+                            <span className='font-semibold'> Alice</span>
+                            <span className='text-gray-600'>@alice . 2m</span>
 
                             <img className='ml-2 w-5 h-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1920px-Twitter_Verified_Badge.svg.png" alt='verified' />
 
@@ -105,7 +105,10 @@ const TweetCard = () => {
                     </div>
 
                     <div className='mt-2'>
-                        <div className='cursor-pointer'>
+                        <div 
+                            className='cursor-pointer'
+                            onClick={ () => navigate(`/tweet/${4}`) }
+                            >
                             <p className='mb-2 p-0'>Twitter clone using react and spring boot</p>
                             <img className='w-[28rem] border border-gray-400 p-5 rounded-md' src='https://svn.apache.org/repos/asf/kafka/site/logos/kafka-logo-wide.png' alt='' />
                         </div>
