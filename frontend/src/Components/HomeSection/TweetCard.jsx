@@ -105,7 +105,10 @@ const TweetCard = () => {
                     </div>
 
                     <div className='mt-2'>
-                        <div className='cursor-pointer'>
+                        <div 
+                            className='cursor-pointer'
+                            onClick={ () => navigate(`/tweet/${4}`) }
+                            >
                             <p className='mb-2 p-0'>Twitter clone using react and spring boot</p>
                             <img className='w-[28rem] border border-gray-400 p-5 rounded-md' src='https://svn.apache.org/repos/asf/kafka/site/logos/kafka-logo-wide.png' alt='' />
                         </div>

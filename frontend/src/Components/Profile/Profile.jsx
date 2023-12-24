@@ -40,7 +40,7 @@ const Profile = () => {
 
     return (
         <div>
-            <section className={`z-50 flex items-center sticy top-0 bg-opacity-95`}>
+            <section className={` bg-white z-50 flex items-center sticy top-0 bg-opacity-95`}>
 
                 <KeyboardBackspaceOutlinedIcon
                     className='cursor-pointer'
