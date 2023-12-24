@@ -11,10 +11,15 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import TweetCard from '../HomeSection/TweetCard';
+import ProfileModal from './ProfileModal';
 
 const Profile = () => {
 
     const [tabValue, setTabValue] = useState("1");
+    const [openProfileModal, setOpenProfileModal] = useState(false);
+    const handleOpenProfileModal = () => setOpenProfileModal(true);
+    const handleClose = () => setOpenProfileModal(false);
+
 
     const navigate = useNavigate();
 
@@ -31,9 +36,9 @@ const Profile = () => {
     const handleTabChange = (event, newValue) => {
         setTabValue(newValue);
 
-        if(newValue === 4) {
+        if (newValue === 4) {
             console.log("Likes tweets");
-        }else if(newValue === 1) {
+        } else if (newValue === 1) {
             console.log("Users tweets");
         }
     }
@@ -69,7 +74,7 @@ const Profile = () => {
                             className='rounded-full'
                             variant='contained'
                             sx={{ borderRadius: "20px" }}
-                            onClick={handleProfileModel}
+                            onClick={handleOpenProfileModal}
                         >
                             Edit Profile
                         </Button>
@@ -132,26 +137,30 @@ const Profile = () => {
             </section>
 
             <section className='py-5'>
-            <Box sx={{ width: '100%', typography: 'body1' }}>
-      <TabContext value={tabValue}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleTabChange} aria-label="lab API tabs example">
-            <Tab label="Tweets" value="1" />
-            <Tab label="Replies" value="2" />
-            <Tab label="Media" value="3" />
-            <Tab label="Likes" value="4" />
+                <Box sx={{ width: '100%', typography: 'body1' }}>
+                    <TabContext value={tabValue}>
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                            <TabList onChange={handleTabChange} aria-label="lab API tabs example">
+                                <Tab label="Tweets" value="1" />
+                                <Tab label="Replies" value="2" />
+                                <Tab label="Media" value="3" />
+                                <Tab label="Likes" value="4" />
 
-          </TabList>
-        </Box>
-        <TabPanel value="1">
-            {[1,1,1,1].map((item) => <TweetCard />)}
-        </TabPanel>
-        <TabPanel value="2">replies</TabPanel>
-        <TabPanel value="3">media</TabPanel>
-        <TabPanel value="4">likes</TabPanel>
+                            </TabList>
+                        </Box>
+                        <TabPanel value="1">
+                            {[1, 1, 1, 1].map((item) => <TweetCard />)}
+                        </TabPanel>
+                        <TabPanel value="2">replies</TabPanel>
+                        <TabPanel value="3">media</TabPanel>
+                        <TabPanel value="4">likes</TabPanel>
 
-      </TabContext>
-    </Box>
+                    </TabContext>
+                </Box>
+            </section>
+
+            <section>
+                <ProfileModal handleClose={handleClose} open={openProfileModal} />
             </section>
         </div>
     )
