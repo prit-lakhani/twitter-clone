@@ -8,23 +8,36 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import TweetReplyModal from './TweetReplyModal';
+import { useState } from 'react';
 
 const TweetCard = () => {
 
     const navigate = useNavigate();
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     const handleLogout = () => {
         console.log("logout");
         handleClose();
     }
 
+    const [openTweetReplyModal, setOpenTweetReplyModal] = useState(false);
+    const handleOpenTweetReplyModal = () => setOpenTweetReplyModal(true);
+    const handleCloseTweetReplyModal = () => setOpenTweetReplyModal(false);
+
     const handleDeleteTweet = () => {
         console.log("delete tweet");
         handleClose();
-    }
-
-    const handleOpenReplyModel = () => {
-        console.log("open model");
     }
 
     const handleCreateRetweet = () => {
@@ -44,17 +57,9 @@ const TweetCard = () => {
     }
 
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
 
     return (
-        <div className=''>
+        <React.Fragment>
 
             {/* <div className='flex items-center font-semibold text-gray-700 py-2'>
         <RepeatIcon />
@@ -118,7 +123,7 @@ const TweetCard = () => {
                             <div className='space-x-3 flex items-center text-gray-600'>
                                 <ChatBubbleOutlineIcon
                                     className='cursor-pointer'
-                                    onClick={handleOpenReplyModel}
+                                    onClick={handleOpenTweetReplyModal}
                                 />
                                 <p>43</p>
                             </div>
@@ -164,7 +169,11 @@ const TweetCard = () => {
                     </div>
                 </div>
             </div>
-        </div>
+
+            <section>
+                <TweetReplyModal handleClose={handleCloseTweetReplyModal} open={openTweetReplyModal} />
+            </section>
+        </React.Fragment>
     )
 }
 
