@@ -40,7 +40,7 @@ const Navigation = () => {
 
                 <div className='py-10'>
                     <Button
-                        sx={{ width: "100%", borderRadius: "29px", py: "15px", bgcolor: '#1e88e5' }} variant='conatined'>
+                        sx={{ width: "100%", borderRadius: "29px", py: "15px", bgcolor: '#1e88e5' }} variant='contained'>
                         Tweet
                     </Button>
                 </div>
@@ -50,11 +50,11 @@ const Navigation = () => {
                 <div className='flex items-center space-x-3'>
                     <Avatar
                         alt='username'
-                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
+                        src='https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg'
                     />
                     <div>
-                        <span>User 1</span> <br></br>
-                        <span className='opacity-70'>@user1</span>
+                        <span>Alice</span> <br></br>
+                        <span className='opacity-70'>@alice</span>
                     </div>
                    
                     <Button

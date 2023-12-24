@@ -41,15 +41,15 @@ const RightSection = () => {
                 </h1>
 
                 <div>
-                    <p className='text-sm'> ICC World Cup . LIVE </p>
+                    <p className='text-sm'> ICC World Cup · LIVE </p>
                     <p className='font-bold'> Ind vs Aus </p>
                 </div>
 
-               {[1,1,1,1].map((item) => <div className='flex justify-betwwen w-full'>
+               {[1,1,1,1].map((item) => <div className='flex justify-between w-full'>
                     <div>
-                        <p>  Entertainment . Trending</p>
+                        <p>  Entertainment · Trending</p>
                         <p className='font-bold'> #Animal </p>
-                        <p className='font-bold'> 34.8 Tweets </p>
+                        <p> 34.8k Tweets </p>
                     </div>
                     <MoreHorizIcon />
                 </div>

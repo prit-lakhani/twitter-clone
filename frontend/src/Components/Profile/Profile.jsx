@@ -47,7 +47,7 @@ const Profile = () => {
                     onClick={handleBack}
                 />
 
-                <h1 className='py-5 text-xl font-bold opacity-90 ml-5 '> User 1</h1>
+                <h1 className='py-5 text-xl font-bold opacity-90 ml-5 '> Alice</h1>
 
             </section>
 
@@ -56,11 +56,11 @@ const Profile = () => {
             </section>
 
             <section className='pl-6'>
-                <div className='flex justify-between items-start mt-5 h-[rem]'>
+                <div className='flex justify-between items-start mt-5 h-[5rem]'>
                     <Avatar
                         className='transform -translate-y-24'
-                        alt='User 1'
-                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
+                        alt='Alice'
+                        src='https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg'
                         sx={{ width: "10rem", height: "10rem", border: "4px solid white" }}
                     />
 
@@ -87,12 +87,12 @@ const Profile = () => {
 
                 <div>
                     <div className='flex items-center'>
-                        <h1 className='font-bold text-lg'>User 1</h1>
+                        <h1 className='font-bold text-lg'>Alice</h1>
                         {true && (
                             <img className='ml-2 w-5 h-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1920px-Twitter_Verified_Badge.svg.png" alt='verified' />
                         )}
                     </div>
-                    <h1 className='text-gray-500'>@user1</h1>
+                    <h1 className='text-gray-500'>@alice</h1>
                 </div>
 
                 <div className='mt-2 space-y-3'>
